@@ -57,7 +57,7 @@ class NotationController {
         } catch (error) {
             console.log(error);
             res.status(500);
-            res.json({ error: 'Erreur lors de la mise à jour de la notation.' })
+            res.json({ error: 'Erreur lors de la suppression de la notation.' })
         }
     }
 }

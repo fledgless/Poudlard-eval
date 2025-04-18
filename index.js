@@ -10,9 +10,11 @@ app.get('/', (req, res) => {
 
 const eleveRoute = require('./Routes/EleveRoute');
 const notationRoute = require('./Routes/NotationRoute');
+const maisonRoute = require('./Routes/MaisonRoute');
 
 app.use('/eleve', eleveRoute);
 app.use('/notation', notationRoute);
+app.use('/maison', maisonRoute);
 
 app.use((req, res) => {
     res.status(404).json({ message: 'Route non trouvée' });

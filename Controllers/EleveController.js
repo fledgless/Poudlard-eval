@@ -57,7 +57,7 @@ class EleveController {
         } catch (error) {
             console.log(error);
             res.status(500);
-            res.json({ error: 'Erreur lors de la mise à jour de l\'élève.' })
+            res.json({ error: 'Erreur lors de la suppression de l\'élève.' })
         }
     }
 }
