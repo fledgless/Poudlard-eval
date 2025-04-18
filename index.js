@@ -13,7 +13,8 @@ const eleveRoute = require('./Routes/EleveRoute'),
     maisonRoute = require('./Routes/MaisonRoute'),
     rentreeRoute = require('./Routes/RentreeRoute'),
     vacancesRoute = require('./Routes/VacancesRoute'),
-    buseRoute = require('./Routes/BuseRoute');
+    buseRoute = require('./Routes/BuseRoute'),
+    concoursRoute = require('./Routes/ConcoursRoute');
 
 app.use('/eleve', eleveRoute);
 app.use('/notation', notationRoute);
@@ -21,6 +22,7 @@ app.use('/maison', maisonRoute);
 app.use('/rentree', rentreeRoute);
 app.use('/vacances', vacancesRoute);
 app.use('/buse', buseRoute);
+app.use('/concours', concoursRoute);
 
 app.use((req, res) => {
     res.status(404).json({ message: 'Route non trouvée' });
