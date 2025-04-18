@@ -14,7 +14,9 @@ const eleveRoute = require('./Routes/EleveRoute'),
     rentreeRoute = require('./Routes/RentreeRoute'),
     vacancesRoute = require('./Routes/VacancesRoute'),
     buseRoute = require('./Routes/BuseRoute'),
-    concoursRoute = require('./Routes/ConcoursRoute');
+    concoursRoute = require('./Routes/ConcoursRoute'),
+    articleRoute = require('./Routes/ArticleRoute'),
+    bdcRoute = require('./Routes/BdcRoute');
 
 app.use('/eleve', eleveRoute);
 app.use('/notation', notationRoute);
@@ -23,6 +25,8 @@ app.use('/rentree', rentreeRoute);
 app.use('/vacances', vacancesRoute);
 app.use('/buse', buseRoute);
 app.use('/concours', concoursRoute);
+app.use('/article', articleRoute);
+app.use('/bdc', bdcRoute);
 
 app.use((req, res) => {
     res.status(404).json({ message: 'Route non trouvée' });
