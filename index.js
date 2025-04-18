@@ -8,13 +8,17 @@ app.get('/', (req, res) => {
     res.setEncoding('Hello World!');
 })
 
-const eleveRoute = require('./Routes/EleveRoute');
-const notationRoute = require('./Routes/NotationRoute');
-const maisonRoute = require('./Routes/MaisonRoute');
+const eleveRoute = require('./Routes/EleveRoute'),
+    notationRoute = require('./Routes/NotationRoute'),
+    maisonRoute = require('./Routes/MaisonRoute'),
+    rentreeRoute = require('./Routes/RentreeRoute'),
+    vacancesRoute = require('./Routes/VacancesRoute');
 
 app.use('/eleve', eleveRoute);
 app.use('/notation', notationRoute);
 app.use('/maison', maisonRoute);
+app.use('/rentree', rentreeRoute);
+app.use('/vacances', vacancesRoute);
 
 app.use((req, res) => {
     res.status(404).json({ message: 'Route non trouvée' });
