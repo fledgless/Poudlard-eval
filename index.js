@@ -9,7 +9,10 @@ app.get('/', (req, res) => {
 })
 
 const eleveRoute = require('./Routes/EleveRoute');
+const notationRoute = require('./Routes/NotationRoute');
+
 app.use('/eleve', eleveRoute);
+app.use('/notation', notationRoute);
 
 app.use((req, res) => {
     res.status(404).json({ message: 'Route non trouvée' });
